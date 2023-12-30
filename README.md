@@ -1,21 +1,23 @@
 # Simple Gym Timer
 
-Questo progetto è un semplice timer di 3 minuti creato per l'allenamento in palestra. È stato progettato per aiutare gli atleti a massimizzare l'ipertrofia durante l'allenamento.
+This project is a simple 3-minute timer created for gym workouts. It's designed to help athletes maximize hypertrophy during their training.
 
-## Come utilizzare
+## How to Use
 
-1. Apri l'app.
-2. Premi il pulsante "Start" per avviare il timer.
-3. Il timer inizierà a contare da 3 minuti.
-4. Puoi mettere in pausa il timer in qualsiasi momento premendo il pulsante "Pause".
-5. Se tieni premuto il pulsante "Start", il timer si resetterà a 3 minuti.
+1. Open the app.
+2. Press the "Start" button to start the timer.
+3. The timer will start counting down from 3 minutes.
+4. You can pause the timer at any time by pressing the "Pause" button.
+5. If you hold down the "Start" button, the timer will reset to 3 minutes.
+6. You can search for exercises by muscle group in the "Exercise" section.
+7. Click on an exercise to view its instructions and a link to a YouTube search for the exercise.
 
-## Installazione
+## Installation
 
-Per installare l'app sul tuo dispositivo, segui questi passaggi:
+To install the app on your device, follow these steps:
 
-1. Clona questo repository sul tuo computer.
-2. Naviga nella directory del progetto e installa le dipendenze con `npm install`.
-3. Avvia l'app con `npm start`.
+1. Clone this repository to your computer.
+2. Navigate to the project directory and install the dependencies with `npm install`.
+3. Start the app with `npm start`.
 
-Buon allenamento!
+Happy training!
