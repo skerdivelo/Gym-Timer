@@ -61,6 +61,7 @@ export default StyleSheet.create({
         elevation: 5
     },
     openButton: {
+        marginBottom: 40,
         backgroundColor: "#F194FF",
         borderRadius: 20,
         padding: 10,
@@ -73,6 +74,13 @@ export default StyleSheet.create({
     },
     modalText: {
         marginBottom: 15,
-        textAlign: "center"
+        textAlign: "center",
+        fontWeight: "bold",
+    },
+    linkText: {
+        color: 'blue',
+        marginTop: 15,
+        textAlign: 'center',
+        fontWeight: 'bold',
     }
 });

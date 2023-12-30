@@ -9,6 +9,7 @@ import {
     Platform,
     ScrollView,
     Modal,
+    Linking
 } from "react-native";
 import styles from "./style";
 
@@ -20,41 +21,41 @@ interface Exercise {
 const Esercizio = () => {
     const [muscle, setMuscle] = useState("");
     const [exercises, setExercises] = useState<Exercise[]>([]);
-    const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(
-        null
-    );
+    const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null);
     const [showInstructions, setShowInstructions] = useState(false);
 
     const searchExercises = async () => {
         const muscleMap: Record<string, string> = {
-            addominali: "abdominals",
-            abduzione: "abductors",
-            adduzione: "adductors",
-            bicipiti: "biceps",
-            polpacci: "calves",
-            petto: "chest",
-            avambracci: "forearms",
-            glutei: "glutes",
-            femorali: "hamstrings",
-            dorsali: "lats",
-            "basso schiena": "lower_back",
-            "medio schiena": "middle_back",
-            collo: "neck",
-            quadricipiti: "quadriceps",
-            trappole: "traps",
-            tricipiti: "triceps",
+            'addominali': 'abdominals',
+            'abduzione': 'abductors',
+            'adduzione': 'adductors',
+            'bicipiti': 'biceps',
+            'polpacci': 'calves',
+            'petto': 'chest',
+            'avambracci': 'forearms',
+            'glutei': 'glutes',
+            'femorali': 'hamstrings',
+            'dorsali': 'lats',
+            'basso schiena': 'lower_back',
+            'medio schiena': 'middle_back',
+            'collo': 'neck',
+            'quadricipiti': 'quadriceps',
+            'trappole': 'traps',
+            'tricipiti': 'triceps',
         };
         const muscleInEnglish = muscleMap[muscle] || muscle;
-        const response = await fetch(
-            `https://api.api-ninjas.com/v1/exercises?muscle=${muscleInEnglish}`,
-            {
-                headers: {
-                    "X-Api-Key": "3kJoXFULN0PahhK3+mB56A==7v7JX2cGuVHPtTOl",
-                },
+        const response = await fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${muscleInEnglish}`, {
+            headers: {
+                'X-Api-Key': '3kJoXFULN0PahhK3+mB56A==7v7JX2cGuVHPtTOl'
             }
-        );
+        });
         const data = await response.json();
         setExercises(data);
+    };
+
+    const openYouTube = (exerciseName: string) => {
+        const formattedExerciseName = exerciseName.split(' ').join('+');
+        Linking.openURL(`https://www.youtube.com/results?search_query=${formattedExerciseName}`);
     };
 
     return (
@@ -120,6 +121,11 @@ const Esercizio = () => {
                                     {selectedExercise?.instructions}
                                 </Text>
                             </ScrollView>
+                            {selectedExercise && (
+                                <TouchableOpacity onPress={() => openYouTube(selectedExercise.name)}>
+                                    <Text style={styles.linkText}>Guarda su YouTube</Text>
+                                </TouchableOpacity>
+                            )}
                         </View>
                     </View>
                 </Modal>
