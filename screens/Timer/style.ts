@@ -6,7 +6,7 @@ export default StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#F5FCFF",
-        marginBottom: 80,
+        marginBottom: 0,
     },
 
     timer: {

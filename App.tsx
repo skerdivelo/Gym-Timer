@@ -14,6 +14,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Button from "./Components/Button";
 import Timer from "./screens/Timer/Timer";
+import MainPage from "./screens/MainPage/MainPage";
+import Esercizio from "./screens/Esercizio/Esercizio";
 
 const Stack = createStackNavigator();
 
@@ -22,7 +24,9 @@ export default function App() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen name="Login" component={LoginScreen} />
+                <Stack.Screen name="MainPage" component={MainPage} />
                 <Stack.Screen name="Timer" component={Timer} />
+                <Stack.Screen name="Esercizio" component={Esercizio} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -42,7 +46,7 @@ function LoginScreen({ navigation }: { navigation: any }) {
         ) {
             navigation.reset({
                 index: 0,
-                routes: [{ name: "Timer" }],
+                routes: [{ name: "MainPage" }],
             });
         } else {
             alert("Username o password errati");
