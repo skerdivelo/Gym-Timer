@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     container: {
@@ -10,6 +10,7 @@ export default StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
+        textAlign: 'center',
     },
     input: {
         height: 40,
@@ -42,7 +43,7 @@ export default StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 22,
+        marginTop: 22
     },
     modalView: {
         margin: 20,
@@ -60,7 +61,6 @@ export default StyleSheet.create({
         elevation: 5
     },
     openButton: {
-        marginBottom: 20,
         backgroundColor: "#F194FF",
         borderRadius: 20,
         padding: 10,
@@ -73,7 +73,6 @@ export default StyleSheet.create({
     },
     modalText: {
         marginBottom: 15,
-        textAlign: "center",
-        fontWeight: "bold",
+        textAlign: "center"
     }
 });
