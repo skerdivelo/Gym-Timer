@@ -18,12 +18,33 @@ export default StyleSheet.create({
     },
     button: {
         backgroundColor: "#841584",
-        padding: 10,
-        borderRadius: 5,
+        padding: 24,
+        borderRadius: 8,
         marginTop: 20,
+        width: 140,
     },
     buttonText: {
         color: "#fff",
+        textAlign: "center",
+        fontSize: 27,
+        fontWeight: "bold",
+    },
+    buttonPressed: {
+        backgroundColor: "red",
+    },
+    sliderContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    slider: {
+        width: 300,
+        
+        margin: 10,
+    },
+    label: {
         fontSize: 20,
+        textAlign: "center",
+        margin: 10,
+        fontWeight: "bold",
     },
 });
